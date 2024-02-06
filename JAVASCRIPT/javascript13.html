@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script>
+            class abc
+            {
+                xyz = (b,j) =>
+                {
+                    alert(j);
+                    var r=b-j;
+                    alert(r);
+                    return r;
+                }
+            }
+                function fun1()
+                {
+                    var e=document.getElementById("txt").value;
+                    obj=new abc();
+                     var date=new Date();                                                             
+                     var v=date.getFullYear();
+                     document.getElementById("hh").innerHTML= obj.xyz(v,e);;
+                }
+            
+            
+        </script>
+    </head>
+    <body>
+            <h1 id="hh"></h1>
+            <input type="text" id="txt">
+            <button type="button" id="bt" onclick="fun1()">submit</button>
+    </body>
+</html>

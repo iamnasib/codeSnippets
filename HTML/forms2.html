@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+           .txt
+             {
+                width:300px;
+                height:40px;
+                font-size: 25px;
+                text-indent: 5px;
+                transition:all 2s;
+                border-radius: 20px;
+             }
+            .txt:hover
+             {
+                background:linear-gradient(60deg,black,white);
+                              
+                              
+             }
+             #d
+             {
+                 height: 100px;
+                 text-align: center;
+                 background:linear-gradient(60deg, rgba(32, 34, 59, 0.849),black);
+                 padding: 50px;
+                 
+                 margin: -10px -10px 10px -10px;
+             }
+             #h
+             {
+                 color: white;
+                 font-family: 'Courier New', Courier, monospace;
+                 font-size: 45px;
+                
+                 transition: all 2s;
+                
+             }
+             #h:hover
+             {
+                 transform: rotate(360deg);
+                 color: black;
+                 cursor: none;
+             }
+             .n
+             {
+                 font-size: 20px;
+                 color: white;
+                 font-family: sans-serif;
+             }
+             .p
+             {
+                 font-size: 16px;
+                 color: white;
+             }
+             
+             .b
+             {
+                 border-radius: 10px;
+
+             }
+             .b:hover
+             {
+                 background: linear-gradient(60deg,black,white);
+             }
+             .c
+             {
+                 border-radius: 10px;
+
+             }
+             .c:hover
+             {
+                 background: linear-gradient(60deg,black,white);
+             }
+        </style>
+
+    </head>
+    <body>
+        <div id="d">
+            <h1 id="h">EMAIL</h1>
+        </div>
+        <div id="d" style="height: 500px;background:linear-gradient(60deg,black, rgba(32, 34, 59, 0.849));box-shadow: 5px 5px 4px black;">
+            <form method="GET" action="">
+                <span class="n"> First Name</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" class="txt" required  name="Name"/><br><br>
+                <span class="n">Middle Name</span>
+                <input type="text" class="txt" required name="middlename"/><br><br>
+                <span class="n">Last Name</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" class="txt" required name="lastname"/><br><br>
+                <span class="n">Email ID</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" class="txt" required placeholder="eg;abcde@gmail.com" name="Email"/><br><br>
+                <span class="n">Gender</span>
+                <select class="c" >
+                    
+                    <option >Choose</option>
+                    <option value="Male" >Male</option>
+                    <option value="Female" >Female</option>
+                </select><br><br>
+               
+                <p class="p">Agree to our privacy policioes to continue</p>
+                <span class="p" >Agree</span>
+                <input type="radio" required name="privacy" value="Agree"/>
+                <span class="p">Disagree</span>
+                <input type="radio"  name="privacy" value="Disagree"/><br><br>
+                <button type="submit" class="b">Submit</button>
+
+            </form>
+        </div>
+    </body>
+</html>

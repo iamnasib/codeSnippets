@@ -1,0 +1,37 @@
+div{
+    background-color: #123456;
+    color: white;
+    height:100px;
+    margin: -8px -8px 0px -8px;
+    text-align: center;
+    line-height: 100px;
+}
+h1{
+        animation: myanim 5s;
+        animation-iteration-count: infinite;
+        transition: all 1s;
+        animation-direction: alternate;
+        
+}
+@keyframes myanim
+{
+    10%
+     {
+                color:blue;
+                /* transform: rotate(0deg); */
+    }
+    40%{
+        /* transform: rotate(360deg); */
+        color: aqua;
+    }
+    60%
+    {
+            color: antiquewhite;
+    }
+    90%
+    {
+            color: black;
+    }
+}
+
+

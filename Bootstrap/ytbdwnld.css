@@ -1,0 +1,60 @@
+.header
+{
+text-align: center;
+height: 200px;
+padding: 50px;
+background:linear-gradient(60deg,rgb(15, 25, 66),grey)
+}
+.header h1
+{
+    font-family: "cyberpunk regular";
+    color: white;
+    cursor: default;
+    transition-delay: 0.4s;
+}
+.header h1:hover
+{
+    filter: blur(1px);
+}
+#main
+{
+    background:linear-gradient(60deg,grey,rgb(15, 25, 66));
+    height: 180px;
+    
+}
+#main h3
+{
+    color: white;
+}
+#main button:hover
+{
+    background: linear-gradient(green 10%,rgb(179, 16, 16)80%);
+}
+.ad
+{
+height: 400px;
+background-color: darksalmon;
+margin-top: -37px;
+}
+.socialmedia
+{
+text-align: center;
+background-color: rgb(15, 25, 66);
+height: 200px;
+padding: 20px;
+margin-top: -16px;
+}
+.socialmedia a
+{
+    color:white
+}
+.socialmedia ul a:hover
+{
+    border: 2px solid rgb(15, 25, 66);
+    color:rgb(15, 25, 66);
+    background-color: white;
+}
+.socialmedia i
+{
+    color:white
+}

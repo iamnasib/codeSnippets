@@ -1,0 +1,66 @@
+<html>
+    <head>
+                <style>
+                            .txt
+                            {
+                                    width:300px;
+                                    height:40px;
+                                    font-size: 25px;
+                                    text-indent: 5px;
+                                    transition:all 1s;
+                            }
+                            .txt:hover
+                            {
+                                background-color: #54779b;
+                              
+                              
+                            }
+                            #dv
+                            {
+                                text-align: center;
+                                background-color: #b1ae0e;
+                                height: 200px;
+                                margin:-8px -8px 0px -8px;
+                                line-height: 200px;
+                            }
+                            #hh
+                            {
+                                font-size: 40px;
+                                text-transform: uppercase;
+                                font-family: sans-serif;
+                                text-shadow: 10px 10px 10px black;
+                                transition: all 2s;
+                            }
+                            #hh:hover
+                            {
+                                transform: rotateY(360deg);
+                            }
+                </style>
+    </head>
+    <body>
+        <div id="dv">
+                <h1 id="hh">Softstacks</h1>
+        </div>
+        <div>
+            <form method="GET" action="">
+                <span>Name</span>
+                <input type="text" class="txt" required placeholder="name" name="txtname"><br><br>
+                <span>Address</span>
+                <input type="text" class="txt" name="address"><br><br>
+                <select>
+                    <option>Choose</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br><br>
+                Male
+                <input type="radio" name="gender" value="male"/>
+                Female
+                <input type="radio" name="gender" value="female"/><br><br>
+                <input type="checkbox" value="biryani">Biryani
+                <input type="checkbox" value="chicken">chicken
+                <input type="checkbox" value="momos">Momos<br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

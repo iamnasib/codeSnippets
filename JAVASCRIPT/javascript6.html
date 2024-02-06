@@ -1,0 +1,40 @@
+<html>
+    <head>
+                <script>
+                    var x;
+                    function fun1()
+                    {
+                            x=document.getElementById("hh");
+                            x.innerHTML="hello"
+                    }
+                    function fun2()
+                    {
+                            x.style.color="red";
+                            x.style.marginTop="0px";
+                            for(var i=0;i<=2;i++)
+                            {
+                            var z=document.getElementsByClassName("pp");
+                            z[i].style.color="green";
+                            }
+                    }
+                    function fun3()
+                    {
+                        x.style.marginTop="-250px";
+                    }
+                </script>
+    </head>
+    <body onload="fun1()">
+        <h1 id="hh" style="text-align: center;margin-top: -250px;position: relative;transition: all 2s;"></h1>
+        <button type="button" style="position: relative;top:200px" onclick="fun2()">click</button><br><br>
+        <button type="button" style="position: relative;top:200px" onclick="fun3()">click</button>
+        <p class="pp">
+            hello
+        </p>
+        <p class="pp">
+            hello
+        </p>
+        <p class="pp">
+            hello
+        </p>
+    </body>
+</html>

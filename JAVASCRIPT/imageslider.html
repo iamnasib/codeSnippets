@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+         <style>
+             .div
+             {
+                 background-color: #123;
+                 width:1710px;
+                 height: 861px;
+                 margin: -8px -20px 0px -8px;
+                 text-align: center;
+                 padding: 90px;
+                 padding-top: 10px;
+             }
+             #slide
+             {
+                 width:1150px;
+                 height:950px;
+                 float: left;
+                 cursor: auto;
+             }
+             .div #back, .div #next
+             {
+                 height: 50px;
+                 width: 50px;
+                 background-color: #123;
+                 border: 1px solid #fafafa;
+                 color: #fafafa;
+                 border-radius: 30%;
+             }
+             .div #back:hover, .div #next:hover
+             {
+                background-color: #fafafa;
+                 border: 1px solid #123;
+                 color: #123;
+                 transform: scale(0.9);
+                 cursor: pointer;
+             }
+             .div #back
+             {
+                 float: left;
+                 margin-top: 500px;
+                 margin-left: 280px;
+             }
+             .div #next
+             {
+                 float:left;
+                 margin-top: 500px;
+             }
+         </style>
+         <script>
+             var images=[
+                 "20201213_124815.jpg",
+                 "20201213_143357.jpg",
+                 "20201213_145240.jpg"
+             ];
+             var num=0;
+             function next()
+             {
+                 var slider=document.getElementById("slide");
+                 num++;
+                 if(num >= images.length)
+                 {
+                     num=0
+                 }
+                 slide.src=images[num];
+             }
+             function prev()
+             {
+                 var slider=document.getElementById("slide");
+                 num--;
+                 if(num < 0)
+                 {
+                     num=images.length-1;
+                 }
+                 slide.src=images[num];
+             }
+         </script>
+    </head>
+    <body>
+        <div class="div">
+            <button id="back" type="button" onclick="prev()"><i class="fas fa-arrow-left"></i></button>
+            <img id="slide" src="20201213_124815.jpg">
+            <button id="next" type="button" onclick="next()"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </body>
+</html>

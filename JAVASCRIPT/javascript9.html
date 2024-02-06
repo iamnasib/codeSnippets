@@ -1,0 +1,36 @@
+<html>
+    <head>
+                <script>
+                
+                    names=["saquib","amir","younis"];
+                    arr=[12,56,74,90];
+                    var len=arr.length;
+                    for(var i=0;i<len;i++)
+                    {
+                        document.write("<h1>"+arr[i]+"</h1>");
+                    }
+                    for (x in arr)
+                    {
+                        document.write("<li>"+arr[x]+"</li>");
+                    }
+                    var c=[];
+                    for(y in names)
+                    {
+                            c[y]=names[y];
+                            document.write(names[y]+"<br>");
+                           
+                    }
+                    function fun1()
+                    {
+                       for(h in c)
+                       {
+                        document.getElementById("h22").innerHTML+=c[h]+"<br>";
+                       }
+                    }
+                   
+                </script>
+    </head>
+    <body onload="fun1()">
+                <h2 id="h22"></h2>
+    </body>
+</html>

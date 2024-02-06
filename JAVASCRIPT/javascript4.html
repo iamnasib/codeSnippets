@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <link href="file/bootstrap.min.css" rel="stylesheet" type="text/css">
+            <link href="file/bootstrap.min.css" rel="stylesheet" type="text/css">
+            <script src="file/jquery-3.2.1.min.js" type="text/javascript"></script>
+            <script src="file/bootstrap.min.js" type="text/javascript"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        
+            <style>
+                html
+                {
+                    --bg: #f5f6f7;
+                    --color-text: #9c9c9c;
+                    --color-orange: #ff6a00;
+                    --color-shadow: -4px -2px 4px 0px #ffffff,
+                                      4px 2px 6px 0px #DFE4EA;
+                    --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,.8),
+                        inset 2px 2px 6px rgba(0,0,0,.1);
+                    --color-equal-shadow: -2px -2px 6px rgba(3,169,244,.01),
+                        2px 2px 6px rgba(0,0,0,.3);
+                    --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0, 0.5),
+                                                 inset 2px 2px 6px rgba(0,0,0,0.3);
+                }
+                #check
+                {
+                    width:20px ;
+                    margin-top: -70px;
+                    margin-left: 190px;
+                }
+                #check:checked
+                {
+                    --bg: #131419;
+                    --color-text: #ffffff;
+                    --color-orange: #ff6a00;
+                    --color-shadow: -3px -3px 10px rgba(255,255,255,.05),
+                                     3px 3px 15px rgba(0,0,0,.5);
+                    --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,0.01),
+                                            inset 2px 2px 6px rgba(0,0,0,.8);
+                    --color-equal-shadow: -2px -2px 6px rgba(3,169,244,.01),
+                                             2px 2px 6px rgba(0,0,0,.8);
+                    --color-equal-inset-shadow: inset -2px -2px 6px rgba(255,106,0,.2),
+                                                 inset 2px 2px 6px rgba(0,0,0,.5);
+                }
+                #body
+                {
+                    background-color: var(--bg);
+                }
+                #div
+                {
+                    text-align: center;
+                    background-color: var(--bg);
+                    box-shadow: var(--color-shadow);
+                    width: 295px;
+                    height: 530px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    border-radius: 10px;
+                    display: block;
+                  
+                }
+                input
+                {
+                    margin-top: 30px;
+                    height: 45px;width: 280px;
+                    font-size: 20px;
+                    border: none;
+                    background-color:var(--bg);
+                    border-radius: 10px;
+                    text-align: right;
+                }
+                .number, .operator, .equal
+                {
+                   
+                    height: 50px;width: 50px;
+                    background-color: var(--bg);
+                    box-shadow: var(--color-shadow);
+                    font-weight: 700;
+                    font-size: 17px;
+                    border: none;
+                    border-radius: 50%;
+                    color: var(--color-text);
+                }
+                .operator
+                {
+                    color: var(--color-orange);
+                }
+                .number:hover, .operator:hover
+                {
+                   box-shadow: var(--color-inset-shadow);
+                }
+                .equal
+                {
+                    background-color: var(--color-orange);
+                    color: #fff !important;
+                    box-shadow: var(--color-equal-shadow);
+                }
+                .equal:hover
+                {
+                    box-shadow: var(--color-equal-inset-shadow);
+                }
+               #heading
+               {
+                color:var(--color-text);
+                font-size: 20px;
+               
+               }
+               #heading::after
+               {
+                   content: "";
+                   width: 105px;
+                   position: absolute;
+                   border-bottom: 3px solid #ff6a00;
+                   z-index: 100;
+                   left: 32.4%;
+                   top: 4%;
+               }
+               
+            </style>
+            <script>
+                function fun1(x)
+                {
+                        document.getElementById("txt").value+=x;
+                }
+                function equal()
+                {
+                     
+                    document.getElementById("txt").value=eval(document.getElementById("txt").value);
+                    
+                    
+                }
+                function cler()
+                {
+                    document.getElementById("txt").value="";
+                }
+                function back() {
+                var val = document.getElementById("txt").value;
+                document.getElementById("txt").value = val.substr(0, val.length - 1);
+                }
+                function check()
+                {
+                var checkbox = document.getElementById('check');
+                if (checkbox.checked = true)
+                {
+                    document.getElementById('body').style.background = "#131419"
+                    document.getElementById('div').style.background = "#131419"
+                    document.getElementById('div').style.boxShadow = "-3px -3px 10px rgba(255,255,255,.05),3px 3px 15px rgba(0,0,0,.5)"                  
+                    document.getElementById('heading').style.color = "#ffffff"
+                    document.getElementById('txt').style.background = "#131419"
+                    document.getElementById('txt').style.color = "#ffffff"
+                    for(var i=0; i<=11;i++)
+                    {
+                        var no=document.getElementsByClassName("number");
+                        no[i].style.backgroundColor="#131419";
+                       no[i].style.boxShadow = "-3px -3px 10px rgba(255,255,255,.05),3px 3px 15px rgba(0,0,0,.5)"
+                      no[i].style.color="ffffff"
+                      no[i].style.onmouse
+                    }
+                    for(var j=0; j<=6;j++)
+                    {
+                        var n=document.getElementsByClassName('operator');
+                        n[j].style.backgroundColor="#131419";
+                        n[j].style.boxShadow = "-3px -3px 10px rgba(255,255,255,.05),3px 3px 15px rgba(0,0,0,.5)"
+
+                    }
+                    document.getElementById('equal').style.boxShadow="-2px -2px 6px rgba(3,169,244,.01),2px 2px 6px rgba(0,0,0,.8)"
+                   
+                    
+                   
+                   
+                   
+                }
+            }
+            function unchecked()
+            {
+                var checkbox = document.getElementById('check');
+                if (checkbox.unchecked = false)
+                {
+                    document.getElementById('body').style.background = "#fff"
+                }
+            }
+               
+            </script>
+    </head>
+    <body id="body">
+        <div id="div">
+            <h1 id="heading">Calculator</h1><label><input type="checkbox" onclick="check()" ondblclick="uncheck()" id="check" name="check"> <span class="btn"><i class="fab fa-moon    "></i></span>
+            </label>
+            <input type="text" id="txt"><br><br><br>
+         
+               
+           
+                   
+                   
+                       <button type="button" class="operator"   onclick="cler()">C</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="operator" onclick="back()" >B</i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="operator" value='%' onclick="fun1('%')">%</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="operator" value='/' onclick="fun1('/')">/</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            
+                    <button type="button" class="number" value='7' onclick="fun1('7')">7</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="number" value='8' onclick="fun1('8')">8</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="number" value='9' onclick="fun1('9')">9</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="operator" value='*' onclick="fun1('*')">x</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <br><br>
+
+                   <button type="button" class="number" value='4' onclick="fun1('4')">4</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+                   <button type="button" class="number" value='5' onclick="fun1('5')">5</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+                   <button type="button" class="number" value='6' onclick="fun1('6')">6</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <button type="button" class="operator" value='-' onclick="fun1('-')">-</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+                        <button type="button" class="number" value='1' onclick="fun1('1')">1</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="number" value='2' onclick="fun1('2')">2</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="number" value='3' onclick="fun1('3')">3</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="operator" value='+' onclick="fun1('+')">+</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br><br>
+                        <button type="button" class="number" value='00' onclick="fun1('00')">00</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="number" value='0' onclick="fun1('0')">0</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="number"  value='.' onclick="fun1('.')">.</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" id="equal" class="equal" onclick="equal()">=</button>
+
+               
+             
+                        
+                        
+                        
+                       
+                
+            </div>
+    </body>
+</html>

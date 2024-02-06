@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <style>
+        .div
+        {
+            text-align: center;
+            line-height: 190px;
+            background-color: #134;
+            color: white;
+            margin-top: 60px;
+            margin-left: 850px;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+        .circle
+        {
+            background-color: rgba(235, 20, 20, 0.705);
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 190px;
+            margin-top: 60px;
+            margin-left: 850px;
+            position: relative;
+        }
+        #hand
+        {
+            position: absolute;
+            height: 100px;
+            width: 2px;
+            background-color: black;
+            left: 100px;
+            transform: rotate();
+        }
+    </style>
+    <script>
+        function prnttime()
+        {
+            var d= new Date();
+            var hours=d.getHours();
+            var mins=d.getMinutes();
+            var sec=d.getSeconds();
+            if(hours<10 )
+            {
+               
+                if(mins<10)
+                {
+                   
+                    if(sec<10)
+                    {
+                       document.getElementById("t").innerHTML="0"+hours +":0"+mins +":0"+sec;
+                       setInterval(prnttime, 1000);
+                    }
+                    else if(sec>=10)
+                    {
+                        document.getElementById("t").innerHTML="0"+hours +":0"+mins +":"+sec;
+                       setInterval(prnttime, 1000);
+                    }
+                }
+                else if(mins>=10)
+                {
+                    document.getElementById("t").innerHTML="0"+hours +":"+mins +":0"+sec;
+                    setInterval(prnttime, 1000);
+                }
+               
+            }
+            else if(hours>=10)
+            {
+               if(mins<10)
+               {
+                   if(sec<10)
+                   {
+                    document.getElementById("t").innerHTML=hours +":0"+mins +":0"+sec;
+                    setInterval(prnttime, 1000);
+                   }
+                   else if(sec>=10)
+                   {
+                    document.getElementById("t").innerHTML=hours +":0"+mins +":"+sec;
+                    setInterval(prnttime, 1000);
+                   }
+               }
+               else if(mins>=10)
+               {
+                   if(sec<10)
+                   {
+                    document.getElementById("t").innerHTML=hours +":"+mins +":0"+sec;
+                    setInterval(prnttime, 1000);
+                   }
+                   else if(sec>=10)
+                   {
+                    document.getElementById("t").innerHTML=hours +":"+mins +":"+sec;
+                    setInterval(prnttime, 1000);
+                   }
+               }
+            }
+           
+            var pos=0;
+           var t=setInterval(move, 1000)
+           
+           var hand=document.getElementById("hand");
+           function move()
+           {
+               pos+=10;
+               hand.style.transform="rotate"(pos+"deg");
+           }
+            
+        }
+
+       
+    </script>
+    <body onload="prnttime()">
+        <div class="div">
+            <h1 id="t"></h1>
+        </div>
+        <div class="circle">
+            <div id="hand">
+                
+            </div>
+        </div>
+        
+    </body>
+</html>

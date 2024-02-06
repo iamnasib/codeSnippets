@@ -1,0 +1,36 @@
+<html>
+    <head>
+            <script>
+                function fun1(value)
+                {
+                        return "hello"+value;
+                }
+                person={
+                    firstname:'nasib',
+                    lastname:'ahmad',
+                    fullname:function()
+                    {
+                        return this.firstname+this.lastname;
+                    }
+                }
+                var x=fun1('nasib');
+                function fun2()
+                {
+                document.getElementById("hh").innerHTML=xyz(12);
+                }
+
+                hello=function()
+                {
+                    alert("hello in secon way");
+                }
+                xyz = (y) =>
+                {
+                    alert("arrow called"+y);
+                    return 'arrow returns'
+                }
+            </script>
+    </head>
+    <body onload="fun2()">
+            <h1 id="hh"></h1>    
+    </body>
+</html>

@@ -1,0 +1,69 @@
+div
+{
+    background:linear-gradient(60deg,rgb(175, 170, 170), rgba(32, 34, 59, 0.849));
+    height: 400px;
+    width: 800px;
+    margin: -8px 0px 0px -8px;
+    padding: 50px;
+    text-align: center;
+    float: left;
+    
+}
+img
+{
+    height: 300px;
+    
+    border-radius: 220px;
+    animation: my 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    
+
+}
+@keyframes my
+{
+    from
+    {
+       transform: rotate(0deg);
+    }
+    to
+    {
+      transform: rotate(360deg);
+    }
+}
+h1
+{
+    font-family: "cyberpunk regular";
+    animation: my2 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes my2
+{
+    10%
+    {
+               color:rgb(158, 158, 172);
+               
+   }
+   40%{
+        transform: rotate(360deg);
+       color: aqua;
+   }
+   60%
+   {
+           color: antiquewhite;
+   }
+   90%
+   {
+           color: black;
+   }
+}
+#dd
+{
+    background-color: red;  
+    
+    height:auto;
+    width: 900px;
+    margin: -8px -100px 0px 0px;
+    
+}

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+         <script>
+
+
+                // var txt = '[{"name":"John", "age":30, "city":"New York"},{"name":"amir", "age":30, "city":"Srinagar"}]'
+                var txt = '{"person":[{"name":"John", "age":30, "city":"New York"},{"name":"amir", "age":30, "city":"Srinagar"}]}'
+                var obj = JSON.parse(txt);
+                var x=obj.person[0].name + obj.person[0].age;
+                function fun1()
+                {
+                document.getElementById("demo").innerHTML = x;
+                }
+         </script>
+    </head>
+    <body onload="fun1()">
+        <h1 id="demo">hello</h1>
+
+    </body>
+</html>

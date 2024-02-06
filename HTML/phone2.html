@@ -1,0 +1,122 @@
+<html>
+    <head>
+          <style>
+              .phone
+              {
+                  position: relative;
+                  width: 360px;
+                  height: 640px;
+                  margin: auto;
+                  border: 7px rgb(0, 0, 0) solid;
+                  margin-top: 100px;
+                  border-top-width: 10px;
+                  border-bottom-width: 10px;
+                  border-radius: 50px;
+                  width: 360px;
+                  height: 640px;
+                  background:linear-gradient(60deg,#ef60a4 ,#e70037 );
+                  
+                  animation: ani 4s;
+                  animation-iteration-count: infinite;
+                  
+                  
+              }
+              @keyframes ani
+              {
+                to
+                {
+                    background:linear-gradient(60deg,#087E8B,#0B3954);
+                }
+              }
+              .phone:before
+              {
+                  content: "";
+                  display: block;
+                  width: 150px;
+                  height:40px;
+                  position: absolute;
+                  top: 11px;
+                  left: 50%;
+                  transform: translate(-50%,-50%);
+                  background: rgb(0, 0, 0);
+                  border-radius: 10px;
+              }
+             .phone .content
+             {
+                 text-align: center;
+             }
+              #p
+            {
+                font-family: "FONTSPRING DEMO - blue vinyl regular";
+                font-size: 50px;
+                cursor: default;
+            }
+            input
+            {
+              height: 35px;
+              width: 260px;
+              border: 1px solid rgb(223, 218, 218);
+              border-radius: 5px;
+              text-indent: 5px;
+            }
+            .form
+            {
+               
+                width: 300px;
+                margin-top: 90px;
+                margin-left: 30px;
+              
+                height: 400px;
+                
+            }
+            
+            button
+            {
+                width: 260px; 
+                height: 32px;
+                border: none;
+                border-radius: 5px;
+                background-color: rgb(0, 81, 255);
+                color: white;
+            }
+            button:hover
+            {
+                background-color: rgb(7, 54, 155);
+            }
+           
+            span
+            {
+                color: gray;
+            }
+            a
+            {
+                text-decoration: none;
+                font-family: sans-serif;
+                color: rgb(3, 55, 151);
+            }
+              
+              
+             
+          </style>
+    </head>
+    <body>
+        <div class="phone">
+            <div class="content">
+                <form method="POST" class="form">
+                    <p id="p">Instagram</p>
+                    
+                        <input type="text" required placeholder="Name" name="name"><br><br>
+                        <input type="email" required placeholder="Email" name="email"><br><br>
+                        <input type="date" required placeholder="Birthday" name="Birthday"><br><br>
+                        <input type="password" required placeholder="Create Password" name="Password"><br><br>
+                        <button type="submit">Create account</button><br><br><br>
+                        <p style="font-size: 14px;font-family: sans-serif;">Already have an account? <a href="phone.html">Sign in</a></p><br><br>
+                    
+                </form><br><br><br><br>
+                
+                <p>© Nasib Farooq</p>
+                
+            </div>
+        </div>
+    </body>
+</html>

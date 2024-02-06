@@ -1,0 +1,67 @@
+.o
+{
+    background: linear-gradient(60deg,black,white);
+    text-align: center;
+    height: 100px;
+    padding: 50px;
+    margin: -8px -8px 0px -8px;
+    animation: frst 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes frst
+{
+    from
+    {
+        background: linear-gradient(60deg,black,white);
+    }
+    to
+    {
+        background: linear-gradient(60deg,rgb(214, 24, 87),blue);
+        font-family: "cyberpunk regular";
+    }
+}
+.n
+{
+    background: linear-gradient(60deg,black,white,grey);
+    text-align: center;
+    height: 100px;
+    padding: 50px;
+    margin: -8px -8px 0px -8px;
+    animation: scnd 3s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes scnd
+{
+    from
+    {
+        background: linear-gradient(60deg,black,white,grey);
+    }
+    to
+    {
+        background: linear-gradient(60deg,grey,black);
+        font-family: "cyberpunk regular";
+    }
+}
+.e
+{
+    background: linear-gradient(60deg,rgb(214, 24, 87),blue);
+    text-align: center;
+    height: 100px;
+    padding: 50px;
+    margin: -8px -8px 0px -8px;
+    animation: thrd 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes thrd
+{
+    from
+    {
+        background: linear-gradient(60deg,rgb(214, 24, 87),blue);
+    }
+    to
+    {
+        background: linear-gradient(60deg,black,white);
+        font-family: "cyberpunk regular";
+    }
+}

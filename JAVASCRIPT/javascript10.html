@@ -1,0 +1,260 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+         <style>
+             body
+             {
+                 background-color: #111;
+             }
+             .div, .des
+             {
+                background-color: rgb(241, 56, 0);
+                margin:-8px -8px 0px -8px ;
+                width: 370px;
+                height: 515px;
+               padding-top: 30px;
+                float: left;
+                text-align: center;
+                line-height: 43px;
+
+             }
+             .des
+             {
+               width: 82%;
+               line-height: normal;
+               border-left: 1px solid #111;
+             }
+             .div ul li
+             {  
+                display:block;
+                
+             }
+             .div button
+             {
+                 width: 120px;
+                 height: 40px;
+                 border-radius: 10px;
+                 border: none;
+                 font-size: 16px;
+                 font-weight: bold;
+                 
+             }
+
+             .div #python
+             {
+                 background-color: rgb(14, 50, 211);
+                 color: rgb(253, 249, 0);
+                 box-shadow: 4px 4px 8px rgb(6, 31, 141);
+             }
+             .div #python:hover
+             {
+                 background-color: rgb(16, 38, 133);
+                 
+               
+             }
+             .div #csharp
+             {
+                 background-color: rgb(188, 14, 211);
+                 color: white;
+                 box-shadow: 4px 4px 8px rgb(138, 9, 155);
+             }
+             .div #csharp:hover
+             {
+                 background-color: rgb(106, 11, 119);
+                 
+               
+             }
+             .div #SQL
+             {
+                 background-color: rgb(18, 175, 45);
+                 color: white;
+                 box-shadow: 4px 4px 8px rgb(6, 94, 20);
+             }
+             .div #SQL:hover
+             {
+                 background-color: rgb(18, 126, 36);
+                
+             }
+             .div #HTML
+             {
+                 background-color: rgb(252, 103, 4);
+                 color: rgb(0, 0, 0);
+                 box-shadow: 4px 4px 8px rgb(143, 60, 5);
+             }
+             .div #HTML:hover
+             {
+                 background-color: rgb(187, 77, 4);
+             }
+             .des #description
+             {
+                 margin-left: 80px;
+                 font-size: 20px;
+             }
+             .des button
+             {
+                 width: 95px;
+                 height: 30px;
+                 border: none;
+                 border-radius: 10px;
+                 background-color: transparent;
+                 color: transparent;
+                 display: none;  
+             }
+             #pyd, #cd, #sd, #hd
+             {
+                transition: all 2s;
+                color: transparent;
+                display: none;
+                position: relative;
+             }
+             .table td,  .table th
+             {
+                 border: 1px solid white;
+             }
+            .table #t1, #t2, #t3,#t4
+            {
+                color: white;
+              float: left;
+               text-align: center;
+               display: none;
+            }
+         </style>
+        <script>
+            function python()
+            {
+               var p=document.getElementById("pyd");
+               p.style.color="black";
+               document.getElementById("pyd").style.display="block";
+               document.getElementById("pb").style.backgroundColor="Green";
+               document.getElementById("pb").style.display="inline-block";
+               document.getElementById("pb").style.color="black";
+               document.getElementById("pb").style.boxShadow="4px 4px 8px black";
+              
+            }
+            function CSharp()
+            {
+                var c=document.getElementById("cd");
+                c.style.color="black";
+                document.getElementById("cd").style.display="block";
+                document.getElementById("cb").style.backgroundColor="Green";
+                document.getElementById("cb").style.display="inline-block";
+                document.getElementById("cb").style.color="black";
+                document.getElementById("cb").style.boxShadow="4px 4px 8px black";
+            }
+            function SQL()
+            {
+                var s=document.getElementById("sd");
+                s.style.color="black";
+                document.getElementById("sd").style.display="block";
+                document.getElementById("sb").style.backgroundColor="Green";
+                document.getElementById("sb").style.display="inline-block";
+                document.getElementById("sb").style.color="black";
+                document.getElementById("sb").style.boxShadow="4px 4px 8px black";
+            }
+            function HTML()
+            {
+                var h=document.getElementById("hd");
+                h.style.color="black";
+                document.getElementById("hd").style.display="block";
+                document.getElementById("hb").style.backgroundColor="Green";
+                document.getElementById("hb").style.display="inline-block";
+                document.getElementById("hb").style.color="black";
+                document.getElementById("hb").style.boxShadow="4px 4px 8px black";
+            }
+            function pm()
+            {
+                document.getElementById("t1").style.display="block";
+            }
+            function cm()
+            {
+                document.getElementById("t2").style.display="block";
+            }
+            function sm()
+            {
+                document.getElementById("t3").style.display="block";
+            }
+            function hm()
+            {
+                document.getElementById("t4").style.display="block";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="div">
+            <ul>
+                <li><button id="python" type="button" onclick="python()">Python</button></li><br><br>
+                <li><button id="csharp" type="button" onclick="CSharp()">CSharp</button></li><br><br>
+                <li><button id="SQL" type="button" onclick="SQL()">SQL</button></li><br><br>
+                <li><button id="HTML" type="button" onclick="HTML()">HTML</button></li><br><br>
+                
+
+            </ul>
+            
+        </div>
+        <div class="des">
+            <p id="pyd">Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented and functional programming. Python is often described as a batteries included language due to its comprehensive standard library.
+                <br> <br><button id="pb" type="button" onclick="pm()">Know more </button>
+            </p>
+            <p id="cd">C#(pronounced see sharp, like the musical note C♯, but written with the number sign)[b] is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.[16] C# was developed around 2000 by Microsoft as part of its .NET initiative and later approved as an international standard by Ecma (ECMA-334) in 2002 and ISO (ISO/IEC 23270) in 2003. It was designed by Anders Hejlsberg, and its development team is currently led by Mads Torgersen, being one of the programming languages designed for the Common Language Infrastructure (CLI). The most recent version is 9.0, which was released in 2020 in .NET 5.0 and included in Visual Studio 2019 version 16.8.
+                <br>  <br><button id="cb" type="button" onclick="cm()">Know more</button>
+            </p>
+            <p id="sd">SQL ("sequel"; Structured Query Language)is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS). It is particularly useful in handling structured data, i.e. data incorporating relations among entities and variables. SQL offers two main advantages over older read–write APIs such as ISAM or VSAM. Firstly, it introduced the concept of accessing many records with one single command. Secondly, it eliminates the need to specify how to reach a record, e.g. with or without an index.
+                <br>  <br><button id="sb" type="button" onclick="sm()">Know more</button>
+            </p>
+            <p id="hd">Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+                <br> <br><button id="hb" type="button" onclick="hm()">Know more</button>
+            </p>
+        </div>
+        <div class="table">
+            <table id="t1">
+                <tr>
+                    <th>Course name</th>
+                    <th>Course Fees</th>
+                    <th>Course Duration</th>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>5000</td>
+                    <td>3 months</td>
+                </tr>
+            </table>
+            <table id="t2">
+                <tr>
+                    <th>Course name</th>
+                    <th>Course Fees</th>
+                    <th>Course Duration</th>
+                </tr>
+                <tr>
+                    <td>CSharp</td>
+                    <td>5000</td>
+                    <td>3 months</td>
+                </tr>
+            </table>
+            <table id="t3">
+                <tr>
+                    <th>Course name</th>
+                    <th>Course Fees</th>
+                    <th>Course Duration</th>
+                </tr>
+                <tr>
+                    <td>SQL</td>
+                    <td>2000</td>
+                    <td>1 months</td>
+                </tr>
+            </table>
+            <table id="t4">
+                <tr>
+                    <th>Course name</th>
+                    <th>Course Fees</th>
+                    <th>Course Duration</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>1500</td>
+                    <td>1  months</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

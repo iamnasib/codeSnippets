@@ -1,0 +1,224 @@
+<html>
+    <head>
+        <link href="file/bootstrap.min.css" rel="stylesheet" type="text/css">
+            <link href="file/bootstrap.min.css" rel="stylesheet" type="text/css">
+            <script src="file/jquery-3.2.1.min.js" type="text/javascript"></script>
+            <script src="file/bootstrap.min.js" type="text/javascript"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+            <style>
+                html
+                {
+                    --bg: #131419;
+                    --color-text: #ffffff;
+                    --color-orange: #ff6a00;
+                    --color-shadow: -3px -3px 10px rgba(255,255,255,.05),
+                                     3px 3px 15px rgba(0,0,0,.5);
+                    --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,0.01),
+                                            inset 2px 2px 6px rgba(0,0,0,.8);
+                    --color-equal-shadow: -2px -2px 6px rgba(3,169,244,.01),
+                                             2px 2px 6px rgba(0,0,0,.8);
+                    --color-equal-inset-shadow: inset -2px -2px 6px rgba(255,106,0,.2),
+                                                 inset 2px 2px 6px rgba(0,0,0,.5);
+                }
+                #check
+                {
+                    width:20px ;
+                    margin-top: -70px;
+                    margin-left: 190px;
+                }
+                #check:checked
+                {
+                    --bg: #131419;
+                    --color-text: #ffffff;
+                    --color-orange: #ff6a00;
+                    --color-shadow: -3px -3px 10px rgba(255,255,255,.05),
+                                     3px 3px 15px rgba(0,0,0,.5);
+                    --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,0.01),
+                                            inset 2px 2px 6px rgba(0,0,0,.8);
+                    --color-equal-shadow: -2px -2px 6px rgba(3,169,244,.01),
+                                             2px 2px 6px rgba(0,0,0,.8);
+                    --color-equal-inset-shadow: inset -2px -2px 6px rgba(255,106,0,.2),
+                                                 inset 2px 2px 6px rgba(0,0,0,.5);
+                }
+                #body
+                {
+                    background-color: var(--bg);
+                }
+                #div
+                {
+                    text-align: center;
+                    background-color: var(--bg);
+                    box-shadow: var(--color-shadow);
+                    width: 295px;
+                    height: 530px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    border-radius: 10px;
+                    display: block;
+                  
+                }
+                input
+                {
+                    margin-top: 30px;
+                    height: 45px;width: 280px;
+                    font-size: 20px;
+                    border: none;
+                    background-color:var(--bg);
+                    border-radius: 10px;
+                    text-align: right;
+                    color: #fff;
+                }
+                .number, .operator, .equal
+                {
+                   
+                    height: 50px;width: 50px;
+                    background-color: var(--bg);
+                    box-shadow: var(--color-shadow);
+                    font-weight: 700;
+                    font-size: 17px;
+                    border: none;
+                    border-radius: 50%;
+                    color: var(--color-text);
+                }
+                .operator
+                {
+                    color: var(--color-orange);
+                }
+                .number:hover, .operator:hover
+                {
+                   box-shadow: var(--color-inset-shadow);
+                }
+                .equal
+                {
+                    background-color: var(--color-orange);
+                    color: #fff !important;
+                    box-shadow: var(--color-equal-shadow);
+                }
+                .equal:hover
+                {
+                    box-shadow: var(--color-equal-inset-shadow);
+                }
+               #heading
+               {
+                color:var(--color-text);
+                font-size: 25px;
+               
+               }
+               #heading::after
+               {
+                   content: "";
+                   width: 115px;
+                   position: absolute;
+                   border-bottom: 3px solid #ff6a00;
+                   z-index: 100;
+                   left: 30.5%;
+                   top: 5%;
+               }
+               
+            </style>
+            <script>
+                var frst;
+                var scnd;
+                var sign;
+                function nmbr(x)
+                {
+                       document.getElementById("txt").value+=x;
+                }
+                function opratr(y)
+                {
+                   frst= document.getElementById("txt").value;
+                    sign=y;
+                   document.getElementById("txt").value="";
+                }
+                function equal()
+                {
+                     scnd=document.getElementById("txt").value;
+                     document.getElementById("txt").value="";
+                  if(sign == '+')
+                  {
+                      var x= parseInt(frst)+parseInt(scnd);
+                      document.getElementById("txt").value=x;
+                  }
+                  else if(sign == '-')
+                  {
+                      var x= parseInt(frst)-parseInt(scnd);
+                      document.getElementById("txt").value=x;
+                  }
+                  else if(sign == '*')
+                  {
+                      var x= parseInt(frst)*parseInt(scnd);
+                      document.getElementById("txt").value=x;
+                  }
+                  else if(sign == '/')
+                  {
+                      var x= parseInt(frst)/parseInt(scnd);
+                      document.getElementById("txt").value=x;
+                  }
+                  else if(sign == '%')
+                  {
+                      var x= parseInt(frst)%parseInt(scnd);
+                      document.getElementById("txt").value=x;
+                  }
+                    
+                    
+                }
+                function cler()
+                {
+                    document.getElementById("txt").value="";
+                }
+                function back() {
+                var val = document.getElementById("txt").value;
+                document.getElementById("txt").value = val.substr(0, val.length - 1);
+                }
+               
+               
+            </script>
+    </head>
+    <body id="body">
+        <div id="div">
+            <h1 id="heading">Calculator</h1>
+            <input type="text" id="txt"><br><br><br>
+         
+               
+           
+                   
+                   
+                       <button type="button" class="operator"   onclick="cler()">C</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="operator" onclick="back()" >B</i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="operator" value='%' onclick="opratr('%')">%</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="operator" value='/' onclick="opratr('/')">/</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            
+                    <button type="button" class="number" value='7' onclick="nmbr('7')">7</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="number" value='8' onclick="nmbr('8')">8</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="number" value='9' onclick="nmbr('9')">9</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="operator" value='*' onclick="opratr('*')">x</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <br><br>
+
+                   <button type="button" class="number" value='4' onclick="nmbr('4')">4</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+                   <button type="button" class="number" value='5' onclick="nmbr('5')">5</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+                   <button type="button" class="number" value='6' onclick="nmbr('6')">6</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <button type="button" class="operator" value='-' onclick="opratr('-')">-</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+                    <button type="button" class="number" value='1' onclick="nmbr('1')">1</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="number" value='2' onclick="nmbr('2')">2</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="number" value='3' onclick="nmbr('3')">3</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="operator" value='+' onclick="opratr('+')">+</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br><br>
+                    <button type="button" class="number" value='00' onclick="nmbr('00')">00</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="number" value='0' onclick="nmbr('0')">0</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="number"  value='.' onclick="nmbr('.')">.</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="equal" onclick="equal()">=</button>
+
+               
+             
+                        
+                        
+                        
+                       
+                
+            </div>
+    </body>
+</html>

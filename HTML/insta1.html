@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <style>
+            .div
+            {
+                background-color: white;
+                height: 700px;
+                margin: -8px -8px 0px -8px;
+                padding: 50px;
+                text-align: center;
+            }
+           
+            #p
+            {
+                font-family: "FONTSPRING DEMO - blue vinyl regular" ;
+                font-size: 50px;
+            }
+            input
+            {
+              height: 35px;
+              width: 260px;
+              border: 1px solid rgb(223, 218, 218);
+              border-radius: 5px;
+              text-indent: 5px;
+            }
+            .form
+            {
+                border: 1px solid rgb(212, 208, 208);
+                width: 350px;
+                margin-top: 90px;
+                margin-left: 900px;
+                background-color: white;
+                height: 430px;
+                
+            }
+            
+            button
+            {
+                width: 260px; 
+                height: 32px;
+                border: none;
+                border-radius: 5px;
+                background-color: rgb(0, 81, 255);
+                color: white;
+            }
+            button:hover
+            {
+                background-color: rgb(7, 54, 155);
+            }
+           
+            span
+            {
+                color: gray;
+            }
+            a
+            {
+                text-decoration: none;
+                font-family: sans-serif;
+                color: rgb(3, 55, 151);
+            }
+            .phone
+              {  float: left;
+                  position: relative;
+                  width: 360px;
+                  height: 600px;
+                  margin-left: 450px;
+                  margin-top: 90px;
+                  border: 7px rgb(0, 0, 0) solid;
+                  
+                  border-top-width: 60px;
+                  border-bottom-width: 60px;
+                  border-radius: 30px;
+              }
+              .phone:before
+              {
+                  content: "";
+                  display: block;
+                  width: 60px;
+                  height: 5px;
+                  position: absolute;
+                  top: -30px;
+                  left: 50%;
+                  transform: translate(-50%,-50%);
+                  background: #333;
+                  border-radius: 10px;
+              }
+              .phone:after
+              {
+                  content: "";
+                  display: block;
+                  width: 35px;
+                  height: 35px;
+                  position: absolute;
+                  bottom: -65px;
+                  left: 50%;
+                  transform: translate(-50%,-50%);
+                  background: #333;
+                  border-radius: 50%;
+              }
+              .phone .content
+              {
+                  width: 360px;
+                  height: 600px;
+                  background-image: url(insta.jpg);
+                  background-repeat: no-repeat;
+                  animation: myy 5s;animation-iteration-count: infinite;
+              }
+              @keyframes myy
+              {
+                  from
+                  {
+                    background-image: url(insta.jpg);
+                  }
+                  to
+                  {
+                    background-image: url(20201213_124815.jpg); 
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="phone">
+            <div class="content">
+                
+                
+            </div>
+        </div>
+        <div class="div">
+            <form method="GET" class="form">
+            <p id="p">Instagram</p>
+            
+                <input type="text" required placeholder="Email ID or Username" name="id"><br><br>
+                <input type="text" required placeholder="Password" name="id"><br><br>
+                <button type="submit">Log in</button><br><br>
+                <span>OR</span><br><br>
+                <a style="font-size: 15px;font-weight: 600;" href="">Log in with Facebook</a><br><br>
+                <a style="font-size: 12px;" href="">Forgot password?</a>
+            
+        </form>
+        <form style="height: 50px;border: 1px solid rgb(212, 208, 208);
+        width: 350px;
+        margin-top: 0px;
+        margin-left: 900px;
+        background-color: white;">
+            <p style="font-size: 14px;font-family: sans-serif;">Don't have an account? <a href="">Sign up</a></p>
+        </form>
+        <p>© Nasib Farooq</p>
+        </div>
+    </body>
+</html>
