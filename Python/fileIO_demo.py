@@ -2,7 +2,7 @@ class file_demoz:
     def writing_data_onfile (self):
         #ptr=open ("d: \\projects\\myfile.txt",encoding="utf-8)"
         with open("D:\\Projects\\python\\myfile.txt","w")as ptr: 
-            ptr.write("welcome to python DE") 
+            ptr.write("Welcome to python DE") 
             print("Data saved to the file") 
     def reading_data_fromfile(self):
         #ptr=open ("d:\\projects\\myfile.txt","r")
